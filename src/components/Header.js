@@ -10,6 +10,7 @@ import AddEditBoardModal from "../modals/AddEditBoardModal";
 import { useDispatch, useSelector } from "react-redux";
 import DeleteModal from "../modals/DeleteModal";
 import boardsSlice from "../redux/boardsSlice";
+import { FaGithub } from "react-icons/fa";
 
 function Header({ setIsBoardModalOpen, isBoardModalOpen }) {
   const [openDropdown, setOpenDropdown] = useState(false);
@@ -73,6 +74,14 @@ function Header({ setIsBoardModalOpen, isBoardModalOpen }) {
         {/* Right Side */}
 
         <div className=" flex space-x-4 items-center md:space-x-6 ">
+          <button className="button hidden md:block">
+            <a
+              href="https://github.com/AmolShelke2/taskie/"
+              target="_blank"
+              rel="noreferrer">
+              <FaGithub size={24} />
+            </a>
+          </button>
           <button
             className=" button hidden md:block "
             onClick={() => {
